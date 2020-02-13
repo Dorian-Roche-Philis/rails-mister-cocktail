@@ -1,8 +1,14 @@
-<h1>Create your Cocktail</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.ritzparis.com/sites/default/files/styles/1440x748/public/images/card_page/slideshow/sans_titre-3_6.jpg?itok=GkdNi9EO);">
+  <div class="container">
+    <h1>Create your Cocktail <strong>- Soft </strong> to <strong>creative</strong>!</h1>
+    <p>Change your life and drink to think different around the world.</p>
+    <a class="btn btn-danger" href="<%=cocktails_path%>">Back to Cocktails's list</a>
+  </div>
+</div>
 
 <div class="form-group">
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.input :name %>
-    <%= f.submit %>
+    <%= f.submit "Create", class: "btn btn-primary" %>
   <% end %>
 </div>

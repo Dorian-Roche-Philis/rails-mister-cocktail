@@ -1,10 +1,16 @@
-<div class='navbar navbar-light bg-light'>
-  <h1>Cocktail List</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.ritzparis.com/sites/default/files/styles/1440x748/public/images/card_page/slideshow/sans_titre-3_6.jpg?itok=GkdNi9EO);">
+  <div class="container">
+    <h1>Cocktail List <strong>- Soft </strong> to <strong>creative</strong>!</h1>
+    <p>Change your life and drink to think different around the world.</p>
+    <a class="btn btn-danger" href="<%=new_cocktail_path%>">Create a new Cocktail</a>
+  </div>
 </div>
 
-<div class="list-group">
+
+<div class="cards">
   <% @cocktails.each do |cocktail| %>
-    <a href="<%=cocktail_path(cocktail)%>" class="list-group-item list-group-item-action list-group-item-light"><%=cocktail.name%></a>
+  <a class="card-category" href="<%=cocktail_path(cocktail)%>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.destinationcocktails.fr/wp-content/uploads/2019/11/le_secret_des_cocktails_a_etages-2.jpg)">
+  <%=cocktail.name%>
+</a>
   <% end %>
 </div>
-<%= link_to 'Create a new Cocktail', new_cocktail_path %>

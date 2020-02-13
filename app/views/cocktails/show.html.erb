@@ -1,21 +1,31 @@
-<div class='navbar navbar-light bg-light'>
-<h1><%=@cocktail.name%></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.ritzparis.com/sites/default/files/styles/1440x748/public/images/card_page/slideshow/sans_titre-3_6.jpg?itok=GkdNi9EO);">
+  <div class="container">
+    <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
+    <p>Sweet and Strong</p>
+    <a class="btn btn-danger" href="<%=new_cocktail_dose_path(@cocktail)%>">Add an ingredient</a>
+    <a class="btn btn-primary" href="<%=cocktails_path%>">Back to list</a>
+  </div>
+</div>
 </div>
 
-<div class="list-group">
+<div class="cards">
   <%@cocktail.doses.each do |dose|%>
-      <li class='list-group-item'><%=dose.ingredient.name%></li>
-      <li class="list-group-item">
-        <%=dose.description%>
-          <%= link_to "Remove ingredient",
-                  dose_path(dose),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" },
-                  class: 'btn btn-danger' %>
-        </li>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%=dose.description%></h2>
+          <h3><strong><%=dose.ingredient.name%></strong></h3>
+            <%= link_to "Remove ingredient",
+                        dose_path(dose),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" },
+                        class: 'btn btn-danger' %>
+
+        </div>
+    </div>
   <% end %>
 </div>
-<div class="d-flex justify-content-around"=>
-<%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-<%= link_to 'Back to list', cocktails_path, class: 'btn btn-primary'  %>
-</div>
+
+
+
+
