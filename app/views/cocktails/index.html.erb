@@ -1,9 +1,9 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<h1>Cocktail List</h1>
 
 <h1>Meet our team</h1>
-<ol>
+<div class="list-group">
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <a href="<%=cocktail_path(cocktail)%>" class="list-group-item list-group-item-action list-group-item-light"><%=cocktail.name%></a>
   <% end %>
-</ol>
+</div>
+<%= link_to 'Create a new Cocktail', new_cocktail_path %>

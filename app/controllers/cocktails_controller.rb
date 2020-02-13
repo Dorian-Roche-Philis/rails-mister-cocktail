@@ -11,14 +11,14 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(params_cocktail)
     if @cocktail.save
 
-    redirect_to cocktail_path
+    redirect_to cocktail_path(@cocktail)
   else
     render "new"
   end
 end
 
   def show
-    @cocktail = Cocktail.find([params[:id]])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   private
