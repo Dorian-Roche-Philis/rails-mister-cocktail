@@ -4,7 +4,15 @@
 
 <div class="list-group">
   <%@cocktail.doses.each do |dose|%>
-      <li class='list-group-item'><%=dose.ingredient.name%> - <%=dose.description%></li>
+      <li class='list-group-item'><%=dose.ingredient.name%></li>
+      <li class="list-group-item">
+        <%=dose.description%>
+          <%= link_to "Remove ingredient",
+                  dose_path(dose),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" },
+                  class: 'btn btn-danger' %>
+        </li>
   <% end %>
 </div>
 <div class="d-flex justify-content-around"=>
