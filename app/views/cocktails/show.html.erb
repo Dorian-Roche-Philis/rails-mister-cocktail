@@ -1,7 +1,8 @@
 <% if @cocktail.photo.attached?  %>
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://d33wubrfki0l68.cloudfront.net/741f4bce7cb8bd1b603abe00ae96e0bde82603c5/17456/thumbs/drink/long-flint-rum-and-fuego-cocktail-in-a-pop-art-style-3200x2133-q60.jpg')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+
 <% else %>
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://d33wubrfki0l68.cloudfront.net/741f4bce7cb8bd1b603abe00ae96e0bde82603c5/17456/thumbs/drink/long-flint-rum-and-fuego-cocktail-in-a-pop-art-style-3200x2133-q60.jpg')">
 <% end %>
   <div class="container">
     <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
