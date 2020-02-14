@@ -34,27 +34,9 @@ $white: #fff;
     }
 }
 
-h1 {
-  color: $white;
-  font-size: 1.25em;
-  font-weight: 900;
-  margin: 0 0 2em;
 
-  @media (min-width: 450px) {
-    font-size: 1.75em;
-  }
 
-  @media (min-width: 760px) {
-    font-size: 3.25em;
-  }
-
-  @media (min-width: 900px) {
-    font-size: 5.25em;
-    margin: 0 0 1em;
-  }
-}
-
-p {
+.buttons p {
   color: $white;
   font-size: 12px;
 
@@ -64,7 +46,6 @@ p {
     transform: translate(-50%, 0);
     top: 90%;
   }
-
   @media(max-height: 500px) {
     left: 0;
     position: relative;
@@ -72,7 +53,7 @@ p {
     transform: translate(0, 0);
   }
 
-  a {
+  .buttons a {
     background: rgba($white, 0);
     border-bottom: 1px solid;
     color: $white;
@@ -90,13 +71,53 @@ p {
 
 
 //default button
-.btn {
+.btnn {
   color: #fff;
   cursor: pointer;
   display: block;
   font-size:16px;
   font-weight: 400;
   line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+
+  @media(min-width: 600px) {
+
+    margin: 0 1em 2em;
+
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+
+  }
+
+  &:hover { text-decoration: none; }
+
+}
+.btn_little {
+  color: red;
+  cursor: pointer;
+  display: block;
+  font-size:8px;
+  font-weight: 300;
+  line-height: 20px;
   margin: 0 0 2em;
   max-width: 160px;
   position: relative;
@@ -170,4 +191,41 @@ p {
   top: 0;
   width: 70%;
 }
+.btn-l {
+    letter-spacing: 0;
+}
+
+.btn-l:hover,
+.btn-l:active {
+  letter-spacing: 3px;
+}
+
+.btn-l:after,
+.btn-l:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-l:hover:after,
+.btn-l:hover:before {
+  backface-visibility: hidden;
+  border-color: red;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-l:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+
 
