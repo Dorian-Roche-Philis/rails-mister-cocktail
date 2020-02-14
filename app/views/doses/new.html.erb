@@ -2,7 +2,12 @@
   <div class="container">
     <h1>Add News Ingredients to your<strong>- <%=@cocktail.name%> !</strong></h1>
     <p>Change your life and drink to think different around the world.</p>
-    <a class="btn btn-primary" href="<%=cocktail_path(@cocktail)%>">Back to Cocktails's list</a>
+    <div class="buttons">
+      <div class="container_b">
+        <a href="<%=cocktails_path%>" class="btn btn-2">LIST</a>
+        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+      </div>
+    </div>
   </div>
 </div>
 
