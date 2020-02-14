@@ -4,18 +4,33 @@
 <% else %>
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://d33wubrfki0l68.cloudfront.net/741f4bce7cb8bd1b603abe00ae96e0bde82603c5/17456/thumbs/drink/long-flint-rum-and-fuego-cocktail-in-a-pop-art-style-3200x2133-q60.jpg')">
 <% end %>
-  <div class="container">
-    <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
-      <h2>Sweet and Strong</h2>
-    <div class="buttons">
-      <div class="container_b">
-        <a href="<%=root_path%>" class="btnn btn-2">LIST</a>
-        <a class="btnn btn-2" href="<%=new_cocktail_dose_path(@cocktail)%>">Add</a>
-        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+    <div class="deconstructed">
+      <div class="deconstructed1">
+        <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
+          <h2>Sweet and Strong</h2>
       </div>
+      <div class="deconstructed2">
+        <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
+          <h2>Sweet and Strong</h2>
+      </div>
+      <div class="deconstructed3">
+        <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
+          <h2>Sweet and Strong</h2>
+      </div>
+      <div class="deconstructed4">
+        <h1><%=@cocktail.name%><strong>- Soft </strong> to <strong>creative</strong>!</h1>
+          <h2>Sweet and Strong</h2>
+      </div>
+
     </div>
+    <div class="buttons">
+          <div class="container_b">
+            <a href="<%=root_path%>" class="btnn btn-2">LIST</a>
+            <a class="btnn btn-2" href="<%=new_cocktail_dose_path(@cocktail)%>">Add</a>
+            <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+          </div>
+        </div>
   </div>
-</div>
 </div>
 
 <div class="cards">
