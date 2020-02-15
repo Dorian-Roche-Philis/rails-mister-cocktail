@@ -34,11 +34,11 @@
   <% @cocktails.each do |cocktail| %>
   <a class="card-category" href="<%=cocktail_path(cocktail)%>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.destinationcocktails.fr/wp-content/uploads/2019/11/le_secret_des_cocktails_a_etages-2.jpg)">
   <%=cocktail.name%>
-  <%= link_to "REMOVE",
+</a>
+<%= link_to "REMOVE",
                         cocktail_path(cocktail),
                         method: :delete,
                         data: { confirm: "Are you sure?" },
                         class: 'buttons container_b btn_little btn-l' %>
-</a>
   <% end %>
 </div>
