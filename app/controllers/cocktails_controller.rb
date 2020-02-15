@@ -21,6 +21,13 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.where(cocktail_id: '(params[:id]')
   end
+  def destroy
+    @dose = Cocktail.find(params[:id])
+    @cocktail.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to cocktails_path
+  end
 
   private
 
