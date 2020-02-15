@@ -1,4 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.ritzparis.com/sites/default/files/styles/1440x748/public/images/card_page/slideshow/sans_titre-3_6.jpg?itok=GkdNi9EO);">
+<% if @cocktail.photo.attached?  %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+
+<% else %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://d33wubrfki0l68.cloudfront.net/741f4bce7cb8bd1b603abe00ae96e0bde82603c5/17456/thumbs/drink/long-flint-rum-and-fuego-cocktail-in-a-pop-art-style-3200x2133-q60.jpg')">
+<% end %>
   <div class="container">
     <h1>Create your Cocktail <strong>- Soft </strong> to <strong>creative</strong>!</h1>
     <h2>Change your life and drink to think different around the world.</h2>
@@ -14,7 +19,7 @@
 <div class="form-group">
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.input :name %>
-    <%= f.input :photo, as: :file%>
-    <%= f.submit "Create", class: "buttons container_b btn_little btn-l" %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create", class: "btn btn_primary" %>
   <% end %>
 </div>

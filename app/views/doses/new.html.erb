@@ -13,9 +13,12 @@
 
 <div class="form-group">
     <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <%= f.input :description %>
       <%= f.association :ingredient %>
-      <%= f.submit "Create", class: "buttons container_b btn_little btn-l" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Create", class: "btn btn_primary" %>
 
     <% end %>
 </div>
