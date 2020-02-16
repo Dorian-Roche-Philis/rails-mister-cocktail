@@ -1,4 +1,7 @@
+
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://d33wubrfki0l68.cloudfront.net/741f4bce7cb8bd1b603abe00ae96e0bde82603c5/17456/thumbs/drink/long-flint-rum-and-fuego-cocktail-in-a-pop-art-style-3200x2133-q60.jpg')">
+  <div class="sticky-top">
+
   <div class="container">
     <div class="deconstructed">
       <div class="deconstructed1">
@@ -16,7 +19,7 @@
   <div class="deconstructed4">
     <h1>Cocktail List <strong>- Soft </strong> to <strong>creative</strong>!</h1>
     <h2>Change your life and drink to think different around the world.</h2>
-  </div>
+</div>
 </div>
       <div class="buttons">
         <div class="container_b">
@@ -24,11 +27,12 @@
             <svg>
               <rect x="0" y="0" fill="none" width="100%" height="100%"/>
             </svg>
+          </div>
         </div>
       </div>
-  </div>
 </div>
-
+  </div>
+<div class="p-3 mb-2 bg-light text-white sticky-top">
 
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
@@ -39,7 +43,7 @@
     <% end %>
     <div class="card-trip">
       <a href="<%=cocktail_path(cocktail)%>" >
-        <img src='<%= picture %>' />
+        <img class="img-fluid img-thumbnail" src='<%= picture %>' />
       </a>
       <div class="card-trip-infos">
         <div>
@@ -49,7 +53,7 @@
                           cocktail_path(cocktail),
                           method: :delete,
                           data: { confirm: "Are you sure?" },
-                          class: 'buttons container_b btn_little btn-l del-link' %>
+                          class: 'btn btn-outline-dark' %>
      </div>
     </div>
 
@@ -57,4 +61,17 @@
 
 
 
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
 </div>

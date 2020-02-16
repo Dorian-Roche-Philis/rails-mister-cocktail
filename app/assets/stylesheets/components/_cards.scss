@@ -30,21 +30,7 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-.card-category {
 
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
 .del-link{
   position:absolute;
   right: 10px;
@@ -54,8 +40,7 @@
   display:flex;
   justify-content: center;
   align-items:center;
-  font-weight: lighter;
-  transform:rotate(45deg);
+  font-weight: bold;
   &:hover {
     opacity: 1;
     text-decoration: none;
@@ -63,11 +48,12 @@
   }
 }
 .cards {
-  position:relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin : 16px;
+  grid-gap: 36px;
+  margin : 24px;
+  background-color:transparent;
+
 }
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -103,6 +89,7 @@
   }
 }
 .card-trip {
+  position:relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);

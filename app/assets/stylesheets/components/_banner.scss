@@ -4,6 +4,10 @@
   padding: 150px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  height: 50px;
+  top: 0;
 }
 @media (min-width: 100px) and (max-width: 575px) {
   .banner {
@@ -57,8 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: black;
+  background-color: transparent;
 }
 
 .deconstructed {
